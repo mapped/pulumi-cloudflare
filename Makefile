@@ -36,6 +36,7 @@ build_nodejs:: install_plugins tfgen
 		echo "module fake_nodejs_module // Exclude this directory from Go tools\n\ngo 1.16" > go.mod && \
 		yarn install && \
 		yarn run tsc && \
+		cp -R scripts/ bin && \
 		cp ../../README.md ../../LICENSE package.json yarn.lock ./bin/ && \
 		sed -i.bak -e "s/\$${VERSION}/$(VERSION)/g" ./bin/package.json
 
