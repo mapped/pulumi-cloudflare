@@ -1,4 +1,4 @@
-module github.com/pulumi/pulumi-cloudflare/provider/v4
+module github.com/mapped/pulumi-cloudflare/provider/v4
 
 go 1.18
 
