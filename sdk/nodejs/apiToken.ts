@@ -17,6 +17,7 @@ import * as utilities from "./utilities";
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as cloudflare from "@pulumi/cloudflare";
+ * import * as pulumi_cloudflare from "@mapped/pulumi-cloudflare";
  *
  * const all = cloudflare.getApiTokenPermissionGroups({});
  * // Token allowed to create new tokens.
@@ -42,6 +43,7 @@ import * as utilities from "./utilities";
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as cloudflare from "@pulumi/cloudflare";
+ * import * as pulumi_cloudflare from "@mapped/pulumi-cloudflare";
  *
  * const all = cloudflare.getApiTokenPermissionGroups({});
  * // Token allowed to read audit logs from all accounts.
@@ -70,6 +72,7 @@ import * as utilities from "./utilities";
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as cloudflare from "@pulumi/cloudflare";
+ * import * as pulumi_cloudflare from "@mapped/pulumi-cloudflare";
  *
  * const all = cloudflare.getApiTokenPermissionGroups({});
  * // Token allowed to edit DNS entries and TLS certs for specific zone.

@@ -12,7 +12,7 @@ import * as utilities from "./utilities";
  *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
- * import * as cloudflare from "@pulumi/cloudflare";
+ * import * as pulumi_cloudflare from "@mapped/pulumi-cloudflare";
  *
  * const corporateDevicesPostureRule = new cloudflare.DevicePostureRule("corporateDevicesPostureRule", {
  *     accountId: "1d5fdc9e88c8a8c4518b068cd94331fe",

@@ -6,6 +6,39 @@ import * as utilities from "./utilities";
 
 /**
  * ## Example Usage
+ * ### With AWS Provider)
+ *
+ * Please see
+ * [`cloudflare.LogPushOwnershipChallenge`](https://www.terraform.io/docs/providers/cloudflare/r/logpush_ownership_challenge.html)
+ * for how to use that resource and the third party provider documentation if you
+ * choose to automate the intermediate step of fetching the ownership challenge contents.
+ *
+ * > **Important:** If you're using this approach, the `destinationConf` values must
+ * match identically in all resources. Otherwise the challenge validation will fail.
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * as pulumi_cloudflare from "@mapped/pulumi-cloudflare";
+ *
+ * const ownershipChallenge = new cloudflare.LogPushOwnershipChallenge("ownershipChallenge", {
+ *     zoneId: "d41d8cd98f00b204e9800998ecf8427e",
+ *     destinationConf: "s3://my-bucket-path?region=us-west-2",
+ * });
+ * const challengeFile = aws.s3.getBucketObjectOutput({
+ *     bucket: "my-bucket-path",
+ *     key: ownershipChallenge.ownershipChallengeFilename,
+ * });
+ * const exampleJob = new cloudflare.LogpushJob("exampleJob", {
+ *     enabled: true,
+ *     zoneId: "d41d8cd98f00b204e9800998ecf8427e",
+ *     name: "My-logpush-job",
+ *     logpullOptions: "fields=RayID,ClientIP,EdgeStartTimestamp&timestamps=rfc3339",
+ *     destinationConf: "s3://my-bucket-path?region=us-west-2",
+ *     ownershipChallenge: challengeFile.apply(challengeFile => challengeFile.body),
+ *     dataset: "http_requests",
+ * });
+ * ```
  * ### Manual Inspection Of S3 Bucket)
  *
  * - Create `cloudflare.LogPushOwnershipChallenge` resource

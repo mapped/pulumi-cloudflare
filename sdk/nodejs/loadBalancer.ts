@@ -12,7 +12,7 @@ import * as utilities from "./utilities";
  *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
- * import * as cloudflare from "@pulumi/cloudflare";
+ * import * as pulumi_cloudflare from "@mapped/pulumi-cloudflare";
  *
  * const foo = new cloudflare.LoadBalancerPool("foo", {
  *     name: "example-lb-pool",

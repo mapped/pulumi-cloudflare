@@ -17,7 +17,7 @@ import * as utilities from "./utilities";
  *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
- * import * as cloudflare from "@pulumi/cloudflare";
+ * import * as pulumi_cloudflare from "@mapped/pulumi-cloudflare";
  *
  * const wordpressFilter = new cloudflare.Filter("wordpressFilter", {
  *     zoneId: "d41d8cd98f00b204e9800998ecf8427e",

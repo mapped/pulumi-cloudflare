@@ -1,5 +1,5 @@
 {
-    "name": "@pulumi/cloudflare",
+    "name": "@mapped/pulumi-cloudflare",
     "version": "${VERSION}",
     "description": "A Pulumi package for creating and managing Cloudflare cloud resources.",
     "keywords": [
@@ -7,7 +7,7 @@
         "cloudflare"
     ],
     "homepage": "https://pulumi.io",
-    "repository": "https://github.com/pulumi/pulumi-cloudflare",
+    "repository": "https://github.com/mapped/pulumi-cloudflare",
     "license": "Apache-2.0",
     "scripts": {
         "build": "tsc",
@@ -22,6 +22,7 @@
         "typescript": "^4.3.5"
     },
     "pulumi": {
-        "resource": true
+        "resource": true,
+        "name":"cloudflare","server": "https://github.com/mapped/pulumi-cloudflare/releases/download/${VERSION}"
     }
 }

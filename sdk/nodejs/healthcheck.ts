@@ -15,7 +15,7 @@ import * as utilities from "./utilities";
  *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
- * import * as cloudflare from "@pulumi/cloudflare";
+ * import * as pulumi_cloudflare from "@mapped/pulumi-cloudflare";
  *
  * const httpHealthCheck = new cloudflare.Healthcheck("httpHealthCheck", {
  *     zoneId: _var.cloudflare_zone_id,
@@ -55,7 +55,7 @@ import * as utilities from "./utilities";
  *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
- * import * as cloudflare from "@pulumi/cloudflare";
+ * import * as pulumi_cloudflare from "@mapped/pulumi-cloudflare";
  *
  * const tcpHealthCheck = new cloudflare.Healthcheck("tcpHealthCheck", {
  *     zoneId: _var.cloudflare_zone_id,

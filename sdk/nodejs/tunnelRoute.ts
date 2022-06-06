@@ -25,7 +25,7 @@ import * as utilities from "./utilities";
  *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
- * import * as cloudflare from "@pulumi/cloudflare";
+ * import * as pulumi_cloudflare from "@mapped/pulumi-cloudflare";
  *
  * const tunnel = new cloudflare.ArgoTunnel("tunnel", {
  *     accountId: "c4a7362d577a6c3019a474fd6f485821",

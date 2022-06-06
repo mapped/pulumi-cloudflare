@@ -11,7 +11,7 @@ import * as utilities from "./utilities";
  *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
- * import * as cloudflare from "@pulumi/cloudflare";
+ * import * as pulumi_cloudflare from "@mapped/pulumi-cloudflare";
  *
  * const exampleNs = new cloudflare.WorkersKvNamespace("exampleNs", {title: "test-namespace"});
  * const example = new cloudflare.WorkersKv("example", {
